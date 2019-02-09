@@ -1,0 +1,42 @@
+<link rel="import" href="../bower_components/polymer/polymer.html" />
+
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html" />
+
+<link rel="import" href="../components/pv-todo-list.html">
+<dom-module id="pv-app">
+  <template>
+    <style></style>
+    <button on-click="_selectPolymer">Polymer</button>
+    <button on-click="_selectReact">React</button>
+    <button on-click="_selectVue">Vue</button>
+    <iron-pages selected="[[_selected]]">
+      <pv-todo-list></pv-todo-list>
+      <div>React</div>
+      <div>Vue</div>
+    </iron-pages>
+  </template>
+  <script>
+    Polymer({
+      is: 'pv-app',
+
+      properties: {
+        _selected: {
+          type: Number,
+          value: 0
+        }
+      },
+
+      _selectPolymer() {
+        this.set('_selected', 0);
+      },
+
+      _selectReact() {
+        this.set('_selected', 1);
+      },
+
+      _selectVue() {
+        this.set('_selected', 2);
+      }
+    });
+  </script>
+</dom-module>
