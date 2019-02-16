@@ -3,6 +3,7 @@
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html" />
 
 <link rel="import" href="../components/pv-todo-list.html">
+<link rel="import" href="../components/pv-vue-todo-list.html">
 <dom-module id="pv-app">
   <template>
     <style></style>
@@ -12,7 +13,7 @@
     <iron-pages selected="[[_selected]]">
       <pv-todo-list></pv-todo-list>
       <div>React</div>
-      <div>Vue</div>
+      <pv-vue-todo-list></pv-vue-todo-list>
     </iron-pages>
   </template>
   <script>

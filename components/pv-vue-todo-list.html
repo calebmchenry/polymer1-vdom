@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/polymer/polymer.html" />
+
+<dom-module id="pv-vue-todo-list">
+	<template>
+		<style></style>
+		<div id="todoList">
+			{{message}}
+		</div>
+	</template>
+	<script>
+
+		Polymer({
+			is: 'pv-vue-todo-list',
+
+			properties: {
+				vm: {
+					type: Object
+				},
+
+				message: {
+					type: String,
+					value: "{{message}}"
+				}
+			},
+
+			ready() {
+				this.vm = new Vue({
+					el: this.$.todoList,
+					data: {
+						message: 'Hello Vue!'
+					}
+				})
+			}
+		});
+	</script>
+</dom-module>
