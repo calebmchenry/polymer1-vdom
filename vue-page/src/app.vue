@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    {{ message }}
+    <h1>TODO:</h1>
+    <input id="todoInput" type="text" v-model="input">
+    <button @click="_addTodo">Add</button>
+    <ol>
+      <li v-for="todo in todos">{{ todo }}</li>
+    </ol>
   </div>
 </template>
 
@@ -8,16 +13,22 @@
 export default {
   data() {
     return {
-      message: 'Hello World',
+      todos: [],
+
+      input: ""
     };
   },
+  methods: {
+    _addTodo(e) {
+      this.todos.push(this.input);
+      this.input = "";
+    }
+  }
 };
 </script>
 
 <style>
 #app {
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  color: blue;
+  border: 1px solid green;
 }
 </style>
