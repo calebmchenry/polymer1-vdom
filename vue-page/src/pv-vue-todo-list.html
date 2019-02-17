@@ -7,6 +7,10 @@
 
 		Polymer({
 			is: 'pv-vue-todo-list',
+
+			ready: function () {
+				Window.VueTodo.$mount(this.$.todoList)
+			}
 		});
 	</script>
 </dom-module>

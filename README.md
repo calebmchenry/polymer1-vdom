@@ -15,7 +15,6 @@ This is just a proof of concept of putting vdom inside of polymer 1. There is de
 1. Add React
 
 ## Vue TODO
-1. Test out Vue
-2. Delete vue import from the end of vue-page/dist/index.html
-3. Find way to allow a vue model instance inside of a dom-if
-4. Figure out an easy way to develope the vue file in the app
+1. Test in IE 11
+2. Figure out an easy way to develope the vue file in the app
+3. Make build process simpler

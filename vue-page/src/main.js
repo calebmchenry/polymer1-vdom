@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
 
-new Vue({
-	el: '#todoList',
+Window.VueTodo = new Vue({
 	render: h => h(App),
 });
