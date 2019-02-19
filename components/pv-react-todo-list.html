@@ -1,0 +1,16 @@
+<dom-module id="pv-react-todo-list">
+	<template>
+		<style></style>
+		<div id="reactTodoList"></div>
+	</template>
+	<script>
+
+		Polymer({
+			is: 'pv-react-todo-list',
+
+			ready: function () {
+				Window.ReactTodo(this.$.reactTodoList);
+			}
+		});
+	</script>
+</dom-module>
