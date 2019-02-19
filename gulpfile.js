@@ -6,7 +6,7 @@ const merge = require('merge-stream');
 const rename = require('gulp-rename');
 const vulcanize = require('gulp-vulcanize');
 
-const exclude = ['vue-todo/dist/main.js', 'react-todo/dist/bundle.js']
+const exclude = ['bower_components/webcomponentsjs/webcomponents-lite.min.js', 'vue-todo/dist/main.js', 'react-todo/dist/bundle.js']
 
 gulp.task('default', () => {
 	return merge(
@@ -22,7 +22,15 @@ gulp.task('default', () => {
 				scriptInHead: false,
 				jsFileName: "compiled.js"
 			}))
-			.pipe(gulpif("index.js", babel()))
+			.pipe(gulpif("index.js", babel({
+				"presets": [
+					["@babel/preset-env", {
+						targets: {
+							ie: 11
+						}
+					}]
+				]
+			})))
 			.pipe(rename(function (file) {
 				if (file.extname === '.js') {
 					file.basename = 'compiled'

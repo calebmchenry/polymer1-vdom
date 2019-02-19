@@ -17,7 +17,7 @@ class TodoList extends React.Component {
 			event.preventDefault()
 			this.setState({
 				input: '',
-				todos: [...this.state.todos, this.state.ipnut]
+				todos: [...this.state.todos, this.state.input]
 			});
 		}
 	}

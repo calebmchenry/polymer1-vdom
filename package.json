@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "webpack --config \"vue.webpack.config.js\" --mode production && webpack --config \"react.webpack.config.js\" --mode production && gulp",
     "build-react": "webpack --config \"react.webpack.config.js\" --mode development",
     "build-vue": "webpack --config \"vue.webpack.config.js\" --mode development",
     "dev": "npx http-server"
