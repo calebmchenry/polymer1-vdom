@@ -12,8 +12,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './src/pv-vue-todo-list.html',
-			// template: './src/index.html',
+			template: './src/index.html',
 		}),
 		new VueLoaderPlugin(),
 	]
