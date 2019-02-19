@@ -4,7 +4,7 @@
     <input id="todoInput" type="text" v-model="input">
     <button @click="_addTodo">Add</button>
     <ol>
-      <li v-for="todo in todos">{{ todo }}</li>
+      <li v-for="(todo, index) in todos" :key="index">{{ todo }}</li>
     </ol>
   </div>
 </template>

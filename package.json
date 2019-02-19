@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "webpack --config \"vue.webpack.config.js\" --mode production && webpack --config \"react.webpack.config.js\" --mode production && gulp",
     "build-react": "webpack --config \"react.webpack.config.js\" --mode development",
     "build-vue": "webpack --config \"vue.webpack.config.js\" --mode development",
     "dev": "npx http-server"
@@ -18,8 +19,15 @@
     "babel-loader": "^8.0.5",
     "bower": "^1.8.8",
     "css-loader": "^2.1.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-crisper": "^1.1.0",
+    "gulp-if": "^2.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-vulcanize": "^8.0.0",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.1",
+    "merge-stream": "^1.0.1",
     "rimraf": "^2.6.3",
     "vue-loader": "^15.6.2",
     "vue-style-loader": "^4.1.2",
