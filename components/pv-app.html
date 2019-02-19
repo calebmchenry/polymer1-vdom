@@ -4,6 +4,7 @@
 
 <link rel="import" href="../components/pv-todo-list.html">
 <link rel="import" href="../components/pv-vue-todo-list.html">
+<link rel="import" href="../components/pv-react-todo-list.html">
 <dom-module id="pv-app">
   <template>
     <style></style>
@@ -12,7 +13,7 @@
     <button on-click="_selectVue">Vue</button>
     <iron-pages selected="[[_selected]]">
       <pv-todo-list></pv-todo-list>
-      <div>React</div>
+      <pv-react-todo-list></pv-react-todo-list>
       <pv-vue-todo-list></pv-vue-todo-list>
     </iron-pages>
   </template>

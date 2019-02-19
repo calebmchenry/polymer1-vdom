@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-vue": "webpack --config \"webpack.config.js\" --mode development",
+    "build-react": "webpack --config \"react.webpack.config.js\" --mode development",
+    "build-vue": "webpack --config \"vue.webpack.config.js\" --mode development",
     "dev": "npx http-server"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "bower": "^1.8.8",
     "css-loader": "^2.1.0",
@@ -27,6 +29,8 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "vue": "^2.6.6"
   }
 }
